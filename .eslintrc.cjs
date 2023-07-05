@@ -1,22 +1,21 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:prettier/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:tailwindcss/recommended'
+    'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'react-refresh',
@@ -25,30 +24,14 @@ module.exports = {
     'prettier',
     '@typescript-eslint',
     'simple-import-sort',
-    'tailwindcss'
+    'tailwindcss',
   ],
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'none',
-        tabWidth: 2,
-        printWidth: 80,
-        useTabs: false,
-        semi: true,
-        singleQuote: true,
-        quoteProps: 'as-needed',
-        bracketSpacing: true,
-        arrowParens: 'always',
-        jsxBracketSameLine: false,
-        endOfLine: 'lf'
-      }
-    ],
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -57,6 +40,7 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'no-undef': 'off',
     'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/no-custom-classname': 'warn'
-  }
+    'tailwindcss/no-custom-classname': 'warn',
+    'tailwindcss/no-contradicting-classname': 'error',
+  },
 };
