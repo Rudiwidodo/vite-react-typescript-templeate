@@ -18,3 +18,7 @@ daisyUI : daisyUI ini sangat mirip dengan boostrap bagi yang terbiasa dengan boo
 3. fragments : berisikan kumpulan dari beberapa element. (form, card, dll)
 4. layouts : berisikan fragment (LoginLayout, RegistLayout, dll)
 5. pages : berisikan layouts yang akan kita tampilkan ke website.
+
+## react router dom
+
+menggunakan react router dom untuk bantuan navigasi website

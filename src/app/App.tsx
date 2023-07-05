@@ -1,14 +1,18 @@
 import '@/app/App.css';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Login from '@/pages/auth/Login';
+import Register from '@/pages/auth/Register';
 
 const App: React.FC = () => {
   return (
-    <>
-      <div className="flex h-screen w-full min-w-full flex-col items-center justify-center gap-y-3 bg-white">
-        <Login />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
